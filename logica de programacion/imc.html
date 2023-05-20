@@ -1,0 +1,113 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA CALCULAR IMC</h1>
+<!-- Hay mucha mas libertad escribiendo dentro de JavaScript -->
+<!--Esto es usa para usar codigo html en la parte de javascript-->
+<script>
+
+    //----------------------------------------------------  FUNCIONES  -------------------------------------------------------------//
+    //aca creamos una funcion para saltar de linea
+    function saltarLinea(){
+
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        
+
+    }
+    //aca creamos una funcion para imprimir algo
+    function imprimir(frase){
+
+        document.write(frase);
+        saltarLinea();
+
+    }
+    //aca creamos una funcion para calcular el imc
+    function calcularImc(peso,altura){
+
+        var imc = peso/ (altura * altura);
+        return (imc);
+    }
+    //-----------------------------------------------------------------------------------------------------------------//
+    
+    //---------------------------------  INTERACCION CON USUARIO  ----------------------------------------------//
+
+    //con prompt podemos interactuar y pedir datos al usuario
+    var nombre = prompt("informe su nombre");
+    var pesoInformado = parseInt(prompt(nombre + ", Informe su peso"));
+    var alturaInformada = parseFloat(prompt(nombre + ", Informe su altura"));
+
+    var imcCalculado = calcularImc(pesoInformado,alturaInformada);
+
+    imprimir(nombre + ", su imc calculado es de : " + imcCalculado);
+
+    if (imcCalculado < 18.5){
+        imprimir("IMC abajo de lo recomendado");
+    }
+
+    else if(imcCalculado >= 18.5 && imcCalculado <= 24.9){
+        imprimir("su IMC esta normal");
+    }
+
+    else if(imcCalculado >= 25.0 && imcCalculado <= 29.9){
+        imprimir("su IMC detecta sobrepeso");
+    }
+
+    else if(imcCalculado >= 30.0){
+        imprimir("su IMC detecta obesidad");
+    }
+
+    //-------------------------------------------------------------------------------//
+
+    //---------------------------------------------  DATOS CHRISTIAN  -------------------------------------------------------------------//
+
+    //var pesoChristian = 71
+    //var alturaChristian = 1.72
+    //var imcChristian = pesoChristian / (alturaChristian * alturaChristian) 
+     
+    //aca guardamos en la variable imaChristian la funcion calcularImc
+    var imcChristian = calcularImc(71,1.72);
+
+    imprimir("El imc calculado de Christian es: " + imcChristian)
+
+
+    //imprimir("el IMC de Chistian es: " + imcChristian);
+    
+    //--------------------------------------------------------------------------------------------------------------//
+
+    //---------------------------------------------------  DATOS FELIPE---------------------------------------------------------//
+
+    //var pesoFelipe = 75
+    //var alturaFelipe = 1.73
+    //var imcFelipe = pesoFelipe / (alturaFelipe * alturaFelipe) 
+     
+    //se pueden pasar tanto los datos directamente como variables
+    var imcFelipe = calcularImc(75,1.73);
+
+    imprimir("El imc calculado de Felipe es: " + imcFelipe)
+
+    //imprimir("el IMC de Felipe es: " + imcFelipe);
+
+    //--------------------------------------------------------------------------------------------------------//
+
+    //----------------------------------------------  PROMEDIO CHRISTIAN Y FELIPE  ---------------------------------------------------------//
+
+    imprimir("El promedio del imc de Christian y Felipe es: " + ((imcChristian + imcFelipe)/2))
+
+    //----------------------------------------------------------------------------------------------------//
+
+    //--------------------------------------------  DATOS Y PROMEDIO GABRIELA Y LUISA  -------------------------------------------------------//
+
+    var imcGabriela = calcularImc(65,1.68);
+
+    imprimir("El imc calculado de Gabriela es: " + imcGabriela)
+
+    var imcLuisa = calcularImc(55,1.60);
+
+    imprimir("El imc calculado de Luisa es: " + imcLuisa)
+
+    imprimir("El promedio del imc de Gabriela y Luisa es: " + ((imcGabriela + imcLuisa)/2))
+
+    //-------------------------------------------------------------------------------------------------//
+
+</script>

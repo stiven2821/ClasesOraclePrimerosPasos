@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA PARA VER SI PUEDE CONDUCIR</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    while(edad<1 || (tieneLicencia != "S" && tieneLicencia != "N")){
+
+        edad = parseInt(prompt("Ingrese edad válida"));
+        tieneLicencia = prompt("Ingresa respuesta de licencia válida (Responde S o N)");
+
+    }
+
+    if (edad >= 18 && tieneLicencia == "S"){
+        imprimir("Puedes conducir");
+    }
+    else{
+        imprimir("No puedes conducir");
+    }
+
+</script>

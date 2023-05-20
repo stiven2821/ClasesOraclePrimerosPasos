@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<h3>¿Alcohol o gasolina?</h3>
+
+<script>
+
+    var tanqueCarro = 40;
+    var recorridoGasolina = 480;
+    var recorridoKm = recorridoGasolina/tanqueCarro;
+
+    document.write("<br>");
+    document.write("Si el carro usa gasolina: <br>");
+    document.write("Los kilometros por cada litro de tanque recorridos por un carro con " + tanqueCarro + " litros de gasolina <br> en un recorrido de " + recorridoGasolina + " Km es de " + Math.round(recorridoKm) + " Km/L");
+    document.write("<br>");
+    document.write("<br>");
+
+    var recorridoAlcohol = 300
+    recorridoKm = recorridoAlcohol/tanqueCarro
+
+    document.write("Si el carro usa alcohol: <br>");
+    document.write("Los kilometros por cada litro de tanque recorridos por un carro con " + tanqueCarro + " litros de alcohol <br> en un recorrido de " + recorridoAlcohol + " Km es de " + Math.round(recorridoKm) + " Km/L");
+
+</script> 

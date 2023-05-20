@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA</h1>
+
+<!-- Hay mucha mas libertad escribiendo dentro de JavaScript -->
+<!--Esto es usa para usar codigo html en la parte de javascript-->
+<script>
+
+    //aca creamos una funcion para saltar de linea
+    function saltarLinea(){
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+    //aca creamos una funcion para imprimir algo
+    function imprimir(frase){
+
+        document.write(frase);
+        saltarLinea();
+
+    }
+     
+    //variable
+    var anio = 2025;
+    //otra forma de hacer saltos de linea
+    //var saltoLinea = "<br><br><br>" 
+
+    imprimir("hola amigos");
+
+    //este codigo calcula las edades de Juan, Pedro y Carlos
+
+    imprimir("Juan tiene: " + (anio-2000) + " años");
+
+    imprimir("Pedro tiene: " + (anio-1995) + " años");
+    
+    anio = 2030;
+
+    imprimir("Carlos tiene: " + (anio-2005) + " años");
+
+</script>

@@ -1,0 +1,43 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+
+    function exibirAlerta(evento){
+        //para que nos diga la posicion en la que se hizo click
+        var x = evento.pageX - pantalla.offsetLeft;//le restamos lo que sobra a la izquierda
+        var y = evento.pageY - pantalla.offsetTop;//le restamos lo que hay arriba
+
+        console.log(evento);
+        alert(x + "," + y);
+
+    }
+
+    function dibujauCirculo(evento){
+        //para que nos diga la posicion en la que se hizo click
+        var x = evento.pageX - pantalla.offsetLeft;//le restamos lo que sobra a la izquierda
+        var y = evento.pageY - pantalla.offsetTop;//le restamos lo que hay arriba
+
+        pincel.fillStyle = "blue";
+        //iniciamos el camino
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill()
+
+        console.log(x + "," + y);
+    }
+
+    //para que el evento se active cuando alla un click
+    //pantalla.onclick = exibirAlerta;
+
+
+    //llamamos funcion dibujar circulo
+    pantalla.onclick = dibujauCirculo;
+    
+
+</script>

@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA DIFERENCIA DE EDAD</h1>
+<br><br>
+Escribir un programa que muestre la diferencia de edad de tu hermano y tu.
+<br><br>
+<script>
+
+//creo la funcion saltar linea
+function saltarLinea(){
+
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+    //hr sirve para poner una linea en el codigo
+    document.write("<hr>");
+    document.write("<br>");
+    document.write("<br>");
+}
+
+//creo la funcion imprimir pasandole como parametro mensaje y agregandole en las instrucciones la funcion saltarLinea
+function imprimir(mensaje){
+    
+    //big cambia la funete de lo que este dentro de esta
+    document.write("<big>" + mensaje + "</big>");
+    saltarLinea();
+}
+
+//defino las variables necesarias
+var edadHermano = 28;
+var edadMia = 21;
+var diferencia = edadHermano - edadMia;
+
+//llamo a la funcion imprimir
+imprimir("La edad de mi hermano es: " + edadHermano);
+imprimir("La edad mia es: " + edadMia);
+
+imprimir("Nuestra diferencia de edad es: " + diferencia);
+
+</script>

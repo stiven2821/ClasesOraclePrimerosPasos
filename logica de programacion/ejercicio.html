@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<h5>PROGRAMA PRACTICA</h5>
+<hr>
+<br><br>
+
+<script>
+
+    function espacios(){
+        
+        document.write("<br><hr><br>");
+    }
+
+    function escribir(frase){
+
+        document.write(frase);
+        espacios();
+    }
+
+    function calcular(nota1,nota2){
+
+        var promedio = (nota1 + nota2)/2
+        return promedio;
+        
+    }
+
+    var notaEst1= parseFloat(prompt("ingrese su primera nota"));
+    var notaEst2= parseFloat(prompt("ingrese su segunda nota"));
+    var resultado = calcular(notaEst1,notaEst2);
+    escribir("El promedio del estudiante es: " + resultado);
+
+</script>

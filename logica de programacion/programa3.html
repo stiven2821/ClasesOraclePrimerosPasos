@@ -1,0 +1,33 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    function dibujarCuadrado(x,y,color){
+        var pantalla = document.querySelector("canvas");//queryselector sirve para conectar etiquetas de html al javaScript 
+        var pincel = pantalla.getContext("2d"); //en la pantalla trabajamos en 2d
+
+        pincel.fillStyle = color;//propiedad //le cambiamos el color a la pizarra
+        pincel.fillRect(x,y,50,50);//fill:llenar rect:rectangulo //funcion
+        //aqui dibujamos un borde a nuestro cuadrado
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
+
+    }
+
+    /*for(var x = 0;x<600;x = x + 50){
+
+        dibujarCuadrado(x,0,"green");
+        
+
+    }*/
+
+    var x = 0;
+    while(x < 600 ){
+        dibujarCuadrado(x,0,"red");
+        dibujarCuadrado(x,50,"yellow");
+        dibujarCuadrado(x,100,"green");
+        x = x + 50;
+
+    }
+
+</script>
